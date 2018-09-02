@@ -1,0 +1,80 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.intro {
+  @include clear;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  background: url("../img/back-mobile.jpg") no-repeat 0px;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 390px;
+  &__text {
+    @include clear;
+    display: flex;
+    height: 214px;
+    margin: auto;
+  }
+  &__decoration {
+    @include clear;
+    display: flex;
+    position: absolute;
+    background: url("../img/intro-triangle-mobile.svg") no-repeat 0px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 58px;
+  }
+}
+
+.headet__caption {
+  @include clear;
+  direction: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.caption__text {
+  @include clear;
+  direction: flex;
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: $menu-size-text;
+  width: 260px;
+  padding: 45px 0 20px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    align-items: center;
+    background: url("../img/back-desktop.jpg") no-repeat center;
+    height: 520px;
+    &__text {
+      height: 350px;
+    }
+    &__decoration {
+      background: url("../img/intro-triangle-tablet.svg") no-repeat 0px;
+      width: 768px;
+      height: 60px;
+    }
+  }
+  .caption__text {
+    font-size: $caption-size-text;
+    width: 480px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro {
+    &__decoration {
+      background: url("../img/intro-triangle.svg") no-repeat 0px;
+      width: 1200px;
+    }
+  }
+}
