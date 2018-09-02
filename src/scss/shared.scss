@@ -1,0 +1,45 @@
+@import "partials/params";
+@import "partials/mixins";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  background-color: $body-bg-color;
+  font-family: "PT Sans", sans-serif;
+  font-size: $base-size-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: normal;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 302px;
+  background-color: $content-bg-color;
+  margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+  .content-container {
+    max-width: 1200px;
+    box-shadow: 0px 0px 12px rgba(38, 38, 38, 0.5);
+  }
+}
