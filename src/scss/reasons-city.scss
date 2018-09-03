@@ -1,0 +1,112 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.reasons__city {
+  @include clear;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 60px;
+  margin: 0 auto;
+}
+
+.city__advantage {
+  @include clear;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.advantage__caption {
+  @include clear;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 25px;
+}
+
+.caption__img {
+  @include clear;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  &--house {
+    background: url("../img/icon-house.svg") no-repeat 0px;
+  }
+  &--gift {
+    background: url("../img/icon-gift.svg") no-repeat 0px;
+  }
+  &--burger {
+    background: url("../img/icon-burger.svg") no-repeat 0px;
+  }
+}
+
+.caption__name {
+  @include clear;
+  font-size: $menu-size-text;
+  font-weight: bold;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  padding-left: 10px;
+}
+
+.advantage__text {
+  @include clear;
+  font-size: $base-size-text;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  padding-left: 50px;
+}
+
+@media (min-width: 768px) {
+  .reasons__city {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 330px;
+    padding: 0;
+    margin: 0;
+  }
+  .city__advantage {
+    justify-content: center;
+    align-items: center;
+    flex-basis: 33.333%;
+    &--order {
+      order: 1;
+    }
+  }
+  .advantage__caption {
+    flex-direction: column;
+    align-items: center;
+  }
+  .caption__img {
+    width: 75px;
+    height: 75px;
+    &--house {
+      background: url("../img/icon-house-big.svg") no-repeat 0px;
+    }
+    &--gift {
+      background: url("../img/icon-gift-big.svg") no-repeat 0px;
+      position: relative;
+      left: 6px;
+    }
+    &--burger {
+      background: url("../img/icon-burger-big.svg") no-repeat 0px;
+      position: relative;
+      left: -2px;
+    }
+  }
+  .caption__name {
+    font-size: $caption-size-text;
+    padding: 20px 0 0;
+  }
+  .advantage__text {
+    text-align: center;
+    width: 170px;
+    padding: 20px 0 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .advantage__text {
+    width: 260px;
+  }
+}

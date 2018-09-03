@@ -1,0 +1,67 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.reasons__ordinary {
+  @include clear;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $reasons-bg-color;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.ordinary__description {
+  @include clear;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid $reasons-border;
+  width: 100%;
+  height: 170px;
+  & .description__caption {
+    @include clear;
+    @include description-caption;
+  }
+  & .description__number {
+    @include clear;
+    @include description-number;
+  }
+  & .description__text {
+    @include clear;
+    @include description-text;
+  }
+}
+
+@media (min-width: 768px) {
+  .reasons__ordinary {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 260px;
+    padding: 0;
+    margin: 0;
+  }
+  .ordinary__description {
+    flex-basis: 33.333%;
+    height: 260px;
+    border: none;
+    & .description__caption {
+      max-width: 200px;
+    }
+    & .description__number {
+    }
+    & .description__text {
+      max-width: 170px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .ordinary__description {
+    & .description__text {
+      max-width: 290px;
+    }
+  }
+}

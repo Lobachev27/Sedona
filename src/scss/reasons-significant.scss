@@ -1,0 +1,140 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.reasons {
+  @include clear;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &__caption {
+    @include clear;
+    direction: flex;
+    flex-direction: row;
+    justify-content: center;
+    & .caption__text {
+      @include clear;
+      direction: flex;
+      text-align: center;
+      font-family: "PT Sans", sans-serif;
+      font-weight: normal;
+      text-transform: uppercase;
+      font-size: $base-size-text;
+      line-height: 1.5em;
+      width: 260px;
+      padding: 20px 0 35px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.caption__decoration--mobile {
+  display: flex;
+  position: relative;
+  background-color: $main-color;
+  width: 100%;
+  height: 15px;
+}
+
+.decoration__triangle {
+  position: absolute;
+  background: url("../img/reasons-triangle-mobile.svg") no-repeat 0px;
+  width: 320px;
+  height: 50px;
+  top: -29px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.reasons__significant {
+  @include clear;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.significant__description {
+  @include clear;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $main-color;
+  width: 100%;
+  height: 190px;
+  padding: 0 20px;
+  & .description__caption {
+    @include clear;
+    @include description-caption;
+    color: $text-color-two;
+  }
+  & .description__number {
+    @include clear;
+    @include description-number;
+    color: $text-color-two;
+  }
+  & .description__text {
+    @include clear;
+    @include description-text;
+    color: $text-color-two;
+  }
+}
+
+.significant__image--city {
+  @include clear;
+  display: flex;
+  background: url("../img/photo-city-mobile.jpg") no-repeat 0px;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 260px;
+}
+
+.significant__image--bridge {
+  @include clear;
+  display: flex;
+  background: url("../img/photo-bridge-mobile.jpg") no-repeat 0px;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 260px;
+}
+
+@media (min-width: 768px) {
+  .reasons__caption .caption__text {
+    width: 100%;
+  }
+  .caption__decoration--mobile {
+    display: none;
+  }
+  .reasons__significant {
+    flex-direction: row;
+  }
+  .significant__description {
+    width: 33%;
+    height: 260px;
+    & .description__caption {
+      font-size: $caption-size-text;
+      max-width: 200px;
+    }
+    & .description__number {
+      padding-top: 11px;
+    }
+    & .description__text {
+      padding-top: 23px;
+      max-width: 270px;
+    }
+  }
+  .significant__image--city {
+    background: url("../img/photo-city.jpg") no-repeat 0px;
+    background-position: center;
+    background-size: cover;
+    width: 67%;
+  }
+  .significant__image--bridge {
+    background: url("../img/photo-bridge.jpg") no-repeat 0px;
+    background-position: center;
+    background-size: cover;
+    width: 67%;
+    order: -1;
+  }
+}

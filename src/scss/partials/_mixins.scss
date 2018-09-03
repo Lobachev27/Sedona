@@ -5,3 +5,29 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+@mixin description-caption {
+  display: flex;
+  text-align: center;
+  font-size: $menu-size-text;
+  font-weight: bold;
+  line-height: 1.5em;
+  text-transform: uppercase;
+}
+
+@mixin description-number {
+  display: flex;
+  font-size: $base-size-text;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  padding-top: 6px;
+}
+
+@mixin description-text {
+  display: flex;
+  text-align: center;
+  font-size: $base-size-text;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  padding-top: 13px;
+}
