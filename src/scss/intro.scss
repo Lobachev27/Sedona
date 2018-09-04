@@ -1,44 +1,62 @@
 @import "partials/params";
 @import "partials/mixins";
 
-.intro {
+.intro--main {
   @include clear;
-  display: flex;
-  position: relative;
-  justify-content: center;
+  @include intro;
   background: url("../img/back-mobile.jpg") no-repeat 0px;
   background-position: center;
   background-size: cover;
-  width: 100%;
   height: 390px;
-  &__text {
-    @include clear;
-    display: flex;
-    height: 214px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  &__decoration {
-    @include clear;
-    display: flex;
-    position: absolute;
-    background: url("../img/intro-triangle-mobile.svg") no-repeat 0px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 320px;
-    height: 58px;
-  }
 }
 
-.header__caption {
+.intro {
+  @include clear;
+  @include intro;
+  background: url("../img/back-mobile.jpg") no-repeat 0px;
+  background-position: center;
+  background-size: cover;
+  height: 160px;
+}
+
+.intro__text--main {
+  @include clear;
+  display: flex;
+  height: 214px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.intro__text {
+  @include clear;
+  display: flex;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.intro__decoration {
+  @include clear;
+  display: flex;
+  position: absolute;
+  background: url("../img/intro-triangle-mobile.svg") no-repeat 0px;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 58px;
+}
+
+.header__caption--main {
   @include clear;
   direction: flex;
   flex-direction: row;
   justify-content: center;
-  & .caption__text {
+  & .caption__text--main {
     @include clear;
     direction: flex;
     text-align: center;
@@ -53,31 +71,94 @@
   }
 }
 
+.header__caption {
+  @include clear;
+  direction: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 190px;
+  margin: 0 auto;
+  & .caption__text {
+    @include clear;
+    direction: flex;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: $menu-size-text;
+    line-height: 1.5em;
+    padding: 40px 20px 15px;
+  }
+  & .caption__description {
+    @include clear;
+    direction: flex;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: $base-size-text;
+    line-height: 1.5em;
+    padding: 15px 20px 0;
+  }
+}
+
 @media (min-width: 768px) {
-  .intro {
+  .intro--main {
     align-items: center;
     background: url("../img/back-desktop.jpg") no-repeat center;
     height: 520px;
-    &__text {
-      height: 350px;
-    }
-    &__decoration {
-      background: url("../img/intro-triangle-tablet.svg") no-repeat 0px;
-      width: 768px;
-      height: 60px;
-    }
   }
-  .header__caption .caption__text {
+
+  .intro {
+    align-items: center;
+    background: url("../img/back-desktop.jpg") no-repeat center;
+    height: 290px;
+  }
+
+  .intro__text--main {
+    height: 350px;
+  }
+
+  .intro__text {
+    height: 80px;
+  }
+
+  .intro__decoration {
+    background: url("../img/intro-triangle-tablet.svg") no-repeat 0px;
+    width: 768px;
+    height: 60px;
+  }
+
+  .header__caption--main .caption__text--main {
     font-size: $caption-size-text;
     width: 480px;
+  }
+
+  .header__caption {
+    width: 480px;
+    height: 250px;
+  }
+
+  .header__caption .caption__text {
+    font-size: $big-size-text;
+    padding: 70px 0 15px;
   }
 }
 
 @media (min-width: 1200px) {
   .intro {
-    &__decoration {
-      background: url("../img/intro-triangle.svg") no-repeat 0px;
-      width: 1200px;
-    }
+    height: 300px;
+  }
+
+  .intro__decoration {
+    background: url("../img/intro-triangle.svg") no-repeat 0px;
+    width: 1200px;
+  }
+
+  .header__caption {
+    height: 290px;
+  }
+
+  .header__caption .caption__text {
+    padding: 100px 0 15px;
   }
 }

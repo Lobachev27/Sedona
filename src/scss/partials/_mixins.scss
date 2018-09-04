@@ -31,3 +31,10 @@
   text-transform: uppercase;
   padding-top: 13px;
 }
+
+@mixin intro {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+}

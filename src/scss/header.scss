@@ -42,8 +42,18 @@
   color: $mobile-nav-text-down;
   font-size: $menu-size-text;
   font-weight: bold;
-  padding: 20px 0;
   border-top: 1px solid $mobile-nav-border;
+  & a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: $mobile-nav-text-down;
+    width: 100%;
+    padding: 20px 0;
+    &:hover {
+      color: $mobile-nav-text-hover;
+    }
+  }
   &:hover {
     background-color: $main-color-hover;
     color: $mobile-nav-text-hover;
@@ -70,6 +80,10 @@
   font-size: $base-size-text;
   font-weight: bold;
   opacity: 0.5;
+  & a {
+    text-decoration: none;
+    color: $text-color-one;
+  }
   &--logo {
     width: 100px;
   }
