@@ -60,20 +60,14 @@
     &__text {
       padding: 40px 0 40px;
     }
-    &__button {
-    }
   }
 }
 
 @media (min-width: 1200px) {
   .offer {
     height: 330px;
-    &__caption {
-    }
     &__text {
       padding: 40px 0 50px;
-    }
-    &__button {
     }
   }
 }
