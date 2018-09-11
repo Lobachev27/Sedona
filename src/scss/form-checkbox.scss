@@ -1,0 +1,64 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.place__option {
+  @include clear;
+  display: flex;
+  align-items: center;
+  font-size: $menu-size-text;
+  font-weight: bold;
+  flex-basis: 100%;
+  padding-top: 25px;
+
+  & .option__checked {
+    display: none;
+  }
+
+  & .option__checked--custom {
+    @include clear;
+    display: flex;
+    position: relative;
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 10px;
+    background-color: $body-bg-color;
+
+    &:hover {
+      background-color: $input-icon-bg;
+      cursor: pointer;
+    }
+  }
+
+  & .option__label {
+    @include clear;
+    display: flex;
+    padding-left: 25px;
+  }
+
+  & .option__checked:checked + .option__checked--custom::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    background: url("../img/tick.svg") no-repeat 0px;
+    background-size: cover;
+    width: 24px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .place__option {
+    flex-basis: 40%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .place__option {
+    flex-basis: 22%;
+    padding-top: 0;
+  }
+}

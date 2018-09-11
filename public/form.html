@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Оставьте свой отзыв</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="bundle.min.css">
+</head>
+
+<body>
+  <main class="content-container">
+    <header class="header">
+      <nav class="header__menu--mobile">
+        <ul class="header__nav--mobile">
+          <li class="nav__item--mobile">
+            <a href="./index.html">Главная</a>
+          </li>
+          <li class="nav__item--mobile">
+            <a href="./photo.html">Фото и видео</a>
+          </li>
+          <li class="nav__item--mobile">
+            <a href="./form.html">Форма отзыва</a>
+          </li>
+          <li class="nav__item--mobile">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="header__menu">
+        <div class="logo">
+          <a href="./index.html">
+            <img class="logo__img" src="./img/logo.svg" alt="Sedona" title="Sedona">
+          </a>
+        </div>
+        <ul class="header__nav">
+          <li class="icon-menu"></li>
+          <li class="nav__item">
+            <a href="./index.html">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a href="./photo.html">Фото и видео</a>
+          </li>
+          <li class="nav__item nav__item--logo"></li>
+          <li class="nav__item">
+            <a href="./form.html">Форма отзыва</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="intro">
+        <img class="intro__text" src="./img/sedona.svg" alt="Welcome" title="Welcome">
+        <div class="intro__decoration"></div>
+      </div>
+      <din class="header__caption">
+        <h1 class="caption__text">Оставьте свой отзыв</h1>
+        <p class="caption__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных
+          вами достопримечательностях.</p>
+      </din>
+    </header>
+    <form class="form" method="post" action="http://test.autre.ru/form.php">
+      <div class="form__self">
+        <h2 class="form__caption">Представьтесь:</h2>
+        <div class="self__container">
+          <div class="self__name">
+            <p class="name__text">Фамилия*:</p>
+            <input class="name__input" name="Surname" type="text" placeholder="Фамилия" autocomplete="off" required>
+          </div>
+          <div class="self__name">
+            <p class="name__text">Имя*:</p>
+            <input class="name__input" name="Name" type="text" placeholder="Имя" autocomplete="off" required>
+          </div>
+          <div class="self__name">
+            <p class="name__text">Отчество:</p>
+            <input class="name__input" name="Patronymic" type="text" placeholder="Отчество" autocomplete="off">
+          </div>
+        </div>
+      </div>
+      <div class="form__contact">
+        <h2 class="form__caption">Контактная информация:</h2>
+        <div class="contact__container">
+          <div class="contact__info">
+            <p class="info__text">Контактный телефон*:</p>
+            <div class="info__input info__input">
+              <input class="input__text" name="Phone" type="text" placeholder="Введите телефон" autocomplete="off"
+                required>
+              <div class="input__icon">
+                <div class="input__icon--phone"></div>
+              </div>
+            </div>
+            <p class="info__text info__text--padding">Электронная почта*:</p>
+            <div class="info__input">
+              <input class="input__text" name="E-mail" type="text" placeholder="Введите e-mail" autocomplete="off"
+                required>
+              <div class="input__icon">
+                <div class="input__icon--e-mail"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form__impression">
+        <h2 class="form__caption">Ваше общее впечатление:</h2>
+        <div class="impression__container">
+          <label class="impression__option">
+            <input class="option__radio" name="Impression" value="Скорее положительное" type="radio" checked>
+            <span class="option__radio--custom"></span>
+            <span class="option__label">Скорее положительное</span>
+          </label>
+          <label class="impression__option">
+            <input class="option__radio" name="Impression" value="Скорее положительное" type="radio">
+            <span class="option__radio--custom"></span>
+            <span class="option__label">Скорее отрицательное</span>
+          </label>
+          <label class="impression__option">
+            <input class="option__radio" name="Impression" value="Скорее положительное" type="radio">
+            <span class="option__radio--custom"></span>
+            <span class="option__label">Затрудняюсь ответить</span>
+          </label>
+        </div>
+      </div>
+      <div class="form__place">
+        <h2 class="form__caption">Посещенные достопримечательности:</h2>
+        <div class="place__container">
+          <label class="place__option">
+            <input class="option__checked" type="checkbox" name="Bridge" checked>
+            <span class="option__checked--custom"></span>
+            <span class="option__label">Мост Дьявола</span>
+          </label>
+          <label class="place__option">
+            <input class="option__checked" type="checkbox" name="Mountain" checked>
+            <span class="option__checked--custom"></span>
+            <span class="option__label">Гора-Колокол</span>
+          </label>
+          <label class="place__option">
+            <input class="option__checked" type="checkbox" name="Park" checked>
+            <span class="option__checked--custom"></span>
+            <span class="option__label">Слайд-парк</span>
+          </label>
+          <label class="place__option">
+            <input class="option__checked" type="checkbox" name="Rocks">
+            <span class="option__checked--custom"></span>
+            <span class="option__label">Красные скалы</span>
+          </label>
+        </div>
+      </div>
+      <div class="form__comment">
+        <h2 class="form__caption">Опишите свои эмоции:</h2>
+        <div class="comment__container">
+          <textarea class="comment__text" name="Comment" placeholder="Опишите подробно все свои восторги"></textarea>
+        </div>
+      </div>
+      <div class="form__submit">
+        <div class="submit__container">
+          <input class="submit__button" type="submit" value="Отправить отзыв">
+          <p class="submit__reminder">* — Обязательные поля</p>
+        </div>
+      </div>
+    </form>
+    <footer class="footer">
+      <h2 class="footer__caption">#visitsedona</h2>
+      <div class="footer__social">
+        <div class="social__button">
+          <div class="button__icon">
+            <div class="button__icon--twitter"></div>
+          </div>
+        </div>
+        <div class="social__button">
+          <div class="button__icon">
+            <div class="button__icon--facebook"></div>
+          </div>
+        </div>
+        <div class="social__button">
+          <div class="button__icon">
+            <div class="button__icon--youtube"></div>
+          </div>
+        </div>
+      </div>
+      <p class="footer__year">2018</p>
+    </footer>
+  </main>
+</body>
+
+</html>

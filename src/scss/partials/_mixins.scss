@@ -38,3 +38,19 @@
   justify-content: center;
   width: 100%;
 }
+
+@mixin form-text {
+  display: flex;
+  text-transform: uppercase;
+  font-size: $base-size-text;
+}
+
+@mixin input-text {
+  display: flex;
+  font-size: $menu-size-text;
+  font-weight: bold;
+  background-color: $body-bg-color;
+  border: none;
+  width: 100%;
+  padding: 20px;
+}

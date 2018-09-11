@@ -1,0 +1,59 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.impression__option {
+  @include clear;
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+
+  & .option__radio {
+    display: none;
+  }
+
+  & .option__radio--custom {
+    @include clear;
+    display: flex;
+    position: relative;
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    background-color: $body-bg-color;
+
+    &:hover {
+      background-color: $input-icon-bg;
+      cursor: pointer;
+    }
+  }
+
+  & .option__label {
+    @include clear;
+    display: flex;
+    font-size: $menu-size-text;
+    font-weight: bold;
+    padding-left: 25px;
+  }
+
+  & .option__radio:checked + .option__radio--custom::before {
+    @include clear;
+    content: "";
+    display: flex;
+    position: absolute;
+    border-radius: 50%;
+    background-color: $radio-btn-color;
+    top: 17px;
+    right: 17px;
+    bottom: 17px;
+    left: 17px;
+  }
+}
+
+@media (min-width: 768px) {
+  .impression__option {
+    padding-top: 24px;
+    & .option__label {
+      padding-left: 20px;
+    }
+  }
+}
